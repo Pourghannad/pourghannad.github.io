@@ -270,22 +270,24 @@
 
     function render() {
       const texture = new TG.Texture(size, size)
-        .add(new TG.SinY().frequency(0.004 + 0.002 * Math.sin(i / 100)))
-        .mul(new TG.SinX().frequency(0.009 + 0.02 * Math.sin(i / 200)))
+        .mul(new TG.SinX().frequency(0.005 + 0.02 * Math.sin(i / 250)))
+        .add(new TG.Noise().tint(0, 0, 0))
         .mul(
-          new TG.SinY()
-            .offset(1028)
-            .frequency(0.04 + 0.02 * Math.sin(i / 500))
+          new TG.SinY().offset(32).frequency(0.04 + 0.02 * Math.sin(i / 250))
         )
+        .div(new TG.SinY().frequency((0.01 * i) / 350).tint(0, 9, 4))
+        .add(new TG.SinX().frequency(0.004 + 0.002 * Math.sin(i / 500)))
         .add(new TG.Noise().tint(0, 0, 0))
-        .div(new TG.SinY().frequency((0.01 * i) / 100).tint(11, 9, 4))
-        .add(new TG.Noise().tint(0, 0.07, 0.1))
+        .mul(new TG.SinX().offset(0).frequency(0.025 * Math.tan(i / 350)))
+        .sub(new TG.Number().tint(0, 0, 0.01))
         .add(new TG.Noise().tint(0, 0, 0))
-        .div(new TG.SinY().frequency(0.015).tint(8, 4, 4))
+        .div(new TG.SinY().frequency(0.015).tint(6, 4, 4))
+        .add(new TG.Noise().tint(0, 0, 0))
+        .mul(new TG.SinY().offset(-500).frequency(0.02 * Math.sin(i / 300)))
+        .add(new TG.Noise().tint(0, 0, 0))
         .toImageData(context);
 
       context.putImageData(texture, 0, 0);
-
       i++;
     }
 
