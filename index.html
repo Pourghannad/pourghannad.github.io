@@ -113,9 +113,10 @@
       font-size: 12px;
       font-weight: bold;
       letter-spacing: 2px;
-      bottom: 0;
+      bottom: 24px;
       left: 0;
-      color: rgb(255 255 255 / 20%);
+      right: 0;
+      color: rgb(255 255 255 / 56%);
     }
 
     footer div {
@@ -231,6 +232,7 @@
         </a>
         <a target="_blank" href="https://pourghannad.github.io/resume.pdf">CV</a>
       </div>
+      <a target="_blank" href="https://www.coffeete.ir/pourghannad">Coffeete.ir</a>
     </footer>
   </main>
   <script src="TexGen.js"></script>
@@ -268,16 +270,18 @@
 
     function render() {
       const texture = new TG.Texture(size, size)
-        .add(new TG.SinY().frequency(0.004 + 0.002 * Math.sin(i / 200)))
-        .mul(new TG.SinX().frequency(0.002 + 0.004 * Math.sin(i / 100)))
+        .add(new TG.SinY().frequency(0.004 + 0.002 * Math.sin(i / 100)))
+        .mul(new TG.SinX().frequency(0.009 + 0.02 * Math.sin(i / 200)))
         .mul(
-          new TG.SinY().offset(128).frequency(0.04 + 0.02 * Math.sin(i / 100))
+          new TG.SinY()
+            .offset(1028)
+            .frequency(0.04 + 0.02 * Math.sin(i / 500))
         )
-        .div(new TG.SinX().frequency(0.02).tint(8, 5, 4))
-        .add(new TG.Noise().tint(0, 0.07, 0.1))
-        .add(new TG.Noise().tint(0.2, 0.1, 0))
         .add(new TG.Noise().tint(0, 0, 0))
-        .div(new TG.SinY().frequency(0.01).tint(8, 4, 4))
+        .div(new TG.SinY().frequency((0.01 * i) / 100).tint(11, 9, 4))
+        .add(new TG.Noise().tint(0, 0.07, 0.1))
+        .add(new TG.Noise().tint(0, 0, 0))
+        .div(new TG.SinY().frequency(0.015).tint(8, 4, 4))
         .toImageData(context);
 
       context.putImageData(texture, 0, 0);
