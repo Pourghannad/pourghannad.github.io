@@ -35,7 +35,7 @@
       font-family: Oswald;
     }
 
-    canvas {
+    canvas#texgen {
       position: fixed;
       width: 100%;
       height: 100%;
@@ -43,12 +43,18 @@
       top: 0px;
       margin: 0px;
       padding: 0px;
-      opacity: 0.2;
+      opacity: 0.35;
       image-rendering: optimizeSpeed;
       image-rendering: -moz-crisp-edges;
       image-rendering: -webkit-optimize-contrast;
       image-rendering: optimize-contrast;
       -ms-interpolation-mode: nearest-neighbor;
+    }
+
+    .dopdots-wrapper {
+      position: absolute;
+      z-index: 2;
+      opacity: 0.5;
     }
 
     main {
@@ -63,7 +69,7 @@
       transition-duration: 250ms;
       transition-property: border-radius;
       transition-delay: 55ms;
-      z-index: 1;
+      z-index: 3;
     }
 
     a.hover {
@@ -163,7 +169,11 @@
 </head>
 
 <body>
-  <canvas></canvas>
+  <canvas id="texgen"></canvas>
+  <div class="dopdots-wrapper">
+    <canvas id="dopdots" width="800px" height="800px" data-margin="28" data-elementsize="1" data-color="#228d9a"
+      data-elementformousemove=".dopdots-wrapper" data-moveradius="45" data-secondColor="#ffffff"></canvas>
+  </div>
   <main>
     <header>
       <img src="avatar.jpg" alt="avatar" title="avatar" width="100px" height="100px" />
@@ -236,65 +246,71 @@
     </footer>
   </main>
   <script src="TexGen.js"></script>
+  <script src="dopdots.bundle.js"></script>
   <script>
-    const main = document.querySelector("main");
-    main.addEventListener("mousemove", (e) => {
-      main.style.borderRadius = `${Math.abs(e.movementX)}px ${Math.abs(
-        e.movementY
-      )}px`;
-    });
-    let previousTouch;
-    main.addEventListener("touchmove", (e) => {
-      if (previousTouch) {
-        const movementX = e.touches[0].pageX - previousTouch.pageX;
-        const movementY = e.touches[0].pageY - previousTouch.pageY;
-        main.style.borderRadius = `${Math.abs(movementX)}px ${Math.abs(
-          movementY
+    document.addEventListener("DOMContentLoaded", () => {
+      dopDots(document.getElementById("dopdots").getContext("2d"));
+
+      const main = document.querySelector("main");
+      main.addEventListener("mousemove", (e) => {
+        main.style.borderRadius = `${Math.abs(e.movementX)}px ${Math.abs(
+          e.movementY
         )}px`;
+      });
+      let previousTouch;
+      main.addEventListener("touchmove", (e) => {
+        if (previousTouch) {
+          const movementX = e.touches[0].pageX - previousTouch.pageX;
+          const movementY = e.touches[0].pageY - previousTouch.pageY;
+          main.style.borderRadius = `${Math.abs(movementX)}px ${Math.abs(
+            movementY
+          )}px`;
+        }
+        previousTouch = e.touches[0];
+      });
+      main.addEventListener("touchend", (e) => {
+        previousTouch = null;
+      });
+
+      let i = 0;
+      const size = 300;
+      const duration = 900;
+      const canvas = document.getElementById("texgen");
+      canvas.width = size;
+      canvas.height = size;
+
+      const context = canvas.getContext("2d");
+
+
+      function render() {
+        const texture = new TG.Texture(size, size)
+          .mul(new TG.SinX().frequency(0.005 + 0.02 * Math.sin(i / duration)))
+          .add(new TG.Noise().tint(0, 0, 0))
+          .mul(
+            new TG.SinY().offset(32).frequency(0.04 + 0.02 * Math.sin(i / duration))
+          )
+          .div(new TG.SinY().frequency((0.01 * i) / duration).tint(0, 9, 4))
+          .add(new TG.SinX().frequency(0.004 + 0.002 * Math.sin(i / duration)))
+          .add(new TG.Noise().tint(0, 0, 0))
+          .mul(new TG.SinX().offset(0).frequency(0.025 * Math.tan(i / duration)))
+          .sub(new TG.Number().tint(0, 0, 0.01))
+          .add(new TG.Noise().tint(0, 0, 0))
+          .div(new TG.SinY().frequency(0.015).tint(6, 4, 4))
+          .add(new TG.Noise().tint(0, 0, 0))
+          .mul(new TG.SinY().offset(-500).frequency(0.02 * Math.sin(i / duration)))
+          .add(new TG.Noise().tint(0, 0, 0))
+          .toImageData(context);
+
+        context.putImageData(texture, 0, 0);
+        i++;
       }
-      previousTouch = e.touches[0];
+
+      function animate() {
+        requestAnimationFrame(animate);
+        render();
+      }
+      animate();
     });
-    main.addEventListener("touchend", (e) => {
-      previousTouch = null;
-    });
-    let i = 0;
-    const size = 300;
-
-    const canvas = document.querySelector("canvas");
-    canvas.width = size;
-    canvas.height = size;
-
-    const context = canvas.getContext("2d");
-
-    animate();
-
-    function render() {
-      const texture = new TG.Texture(size, size)
-        .mul(new TG.SinX().frequency(0.005 + 0.02 * Math.sin(i / 250)))
-        .add(new TG.Noise().tint(0, 0, 0))
-        .mul(
-          new TG.SinY().offset(32).frequency(0.04 + 0.02 * Math.sin(i / 250))
-        )
-        .div(new TG.SinY().frequency((0.01 * i) / 350).tint(0, 9, 4))
-        .add(new TG.SinX().frequency(0.004 + 0.002 * Math.sin(i / 500)))
-        .add(new TG.Noise().tint(0, 0, 0))
-        .mul(new TG.SinX().offset(0).frequency(0.025 * Math.tan(i / 350)))
-        .sub(new TG.Number().tint(0, 0, 0.01))
-        .add(new TG.Noise().tint(0, 0, 0))
-        .div(new TG.SinY().frequency(0.015).tint(6, 4, 4))
-        .add(new TG.Noise().tint(0, 0, 0))
-        .mul(new TG.SinY().offset(-500).frequency(0.02 * Math.sin(i / 300)))
-        .add(new TG.Noise().tint(0, 0, 0))
-        .toImageData(context);
-
-      context.putImageData(texture, 0, 0);
-      i++;
-    }
-
-    function animate() {
-      requestAnimationFrame(animate);
-      render();
-    }
   </script>
 </body>
 
