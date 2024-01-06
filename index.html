@@ -52,7 +52,7 @@
     }
 
     .dopdots-wrapper {
-      position: absolute;
+      position: fixed;
       z-index: 2;
       opacity: 0.5;
     }
@@ -171,8 +171,9 @@
 <body>
   <canvas id="texgen"></canvas>
   <div class="dopdots-wrapper">
-    <canvas id="dopdots" width="800px" height="800px" data-margin="28" data-elementsize="1" data-color="#228d9a"
-      data-elementformousemove=".dopdots-wrapper" data-moveradius="45" data-secondColor="#ffffff"></canvas>
+    <canvas id="dopdots" width="800px" height="800px" data-margin="28" data-type="grid" data-elementsize="1"
+      data-color="#228d9a" data-elementformousemove=".dopdots-wrapper" data-moveradius="45"
+      data-secondColor="#ffffff"></canvas>
   </div>
   <main>
     <header>
