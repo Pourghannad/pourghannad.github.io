@@ -27,7 +27,7 @@
   <style>
     body {
       margin: 0px;
-      background-color: #0d2736;
+      background-color: #160404;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -43,7 +43,7 @@
       top: 0px;
       margin: 0px;
       padding: 0px;
-      opacity: 0.35;
+      opacity: 0.1;
       image-rendering: optimizeSpeed;
       image-rendering: -moz-crisp-edges;
       image-rendering: -webkit-optimize-contrast;
@@ -286,17 +286,14 @@
       function render() {
         const texture = new TG.Texture(size, size)
           .mul(new TG.SinX().frequency(0.005 + 0.02 * Math.sin(i / duration)))
-          .add(new TG.Noise().tint(0, 0, 0))
+          .add(new TG.Noise().tint(0, 0, 1))
           .mul(
             new TG.SinY().offset(32).frequency(0.04 + 0.02 * Math.sin(i / duration))
           )
-          .div(new TG.SinY().frequency((0.01 * i) / duration).tint(0, 9, 4))
+          .div(new TG.SinY().frequency((0.01 * i) / duration).tint(1, 1, 9))
           .add(new TG.SinX().offset(-10).frequency(0.005 + 0.002 * Math.sin(i / (duration * 0.9))).tint(1.1, 1, 1.1))
           .add(new TG.Noise().tint(0, 0, 0))
           .mul(new TG.SinX().offset(10).frequency(0.025 * Math.tan(i / duration)))
-          .sub(new TG.Number().tint(0, 0, 0.01))
-          .add(new TG.Noise().tint(0, 0, 0))
-          .div(new TG.SinY().frequency(0.015).tint(6, 4, 4))
           .add(new TG.Noise().tint(0, 0, 0))
           .mul(new TG.SinY().offset(-500).frequency(0.02 * Math.sin(i / duration)))
           .add(new TG.Noise().tint(0, 0, 0))
