@@ -251,12 +251,16 @@
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       dopDots(document.getElementById("dopdots").getContext("2d"));
+      const movementOffset = 8;
+      const maxMovement = 85;
 
       const main = document.querySelector("main");
       main.addEventListener("mousemove", (e) => {
-        main.style.borderRadius = `${Math.abs(e.movementX)}px ${Math.abs(
-          e.movementY
-        )}px`;
+        const moveX = Math.abs(Math.abs(e.movementX) - movementOffset);
+        const moveY = Math.abs(Math.abs(e.movementY) - movementOffset);
+        const radiusX = moveX > maxMovement ? maxMovement : moveX;
+        const radiusY = moveY > maxMovement ? maxMovement : moveY;
+        main.style.borderRadius = `${radiusX}px ${radiusY}px / ${radiusX * 2}px ${radiusY * 2}px`;
       });
       let previousTouch;
       main.addEventListener("touchmove", (e) => {
