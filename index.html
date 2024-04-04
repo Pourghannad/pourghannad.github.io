@@ -61,7 +61,7 @@
       width: 300px;
       height: 450px;
       position: relative;
-      background-color: #2993a1;
+      background-color: rgb(41 147 161 / 92%);
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -278,8 +278,8 @@
       });
 
       let i = 0;
-      const size = 300;
-      const duration = 420;
+      const size = 180;
+      const duration = 500;
       const canvas = document.getElementById("texgen");
       canvas.width = size;
       canvas.height = size;
@@ -290,22 +290,20 @@
       function render() {
         const texture = new TG.Texture(size, size)
           .mul(new TG.SinY().offset(size).frequency(0.02 * Math.sin(i / duration)))
-          .add(new TG.Noise().tint(0, 0, 0))
+          .add(new TG.Noise().tint(1, 0, 50))
           .mul(
             new TG.SinX().offset(-size).frequency(0.04 + 0.02 * Math.sin(i / duration))
           )
-          .add(new TG.Noise().tint(0, 0, 0))
-          .div(new TG.SinX().frequency((0.01 * i) / duration).tint(1, 1, 9))
+          .add(new TG.Noise().tint(1, 0, 8))
+          .div(new TG.SinX().frequency((0.01 * i) / duration).tint(2, 0, 5))
+          .add(new TG.Noise().tint(0, 0, 5))
           .mul(
             new TG.SinX().offset(-size).frequency(0.04 + 0.02 * Math.sin(i / duration))
           )
-          .add(new TG.Noise().tint(0, 0, 0))
-          .add(new TG.SinX().offset(-90).frequency(0.005 + 0.002 * Math.sin(i / (duration * 0.9))).tint(1.1, 1, 1.1))
+          .add(new TG.SinX().offset(-90).frequency(0.005 + 0.002 * Math.sin(i / (duration * 0.9))).tint(0, 0, 5))
           .mul(
             new TG.SinX().offset(-size).frequency(0.04 + 0.02 * Math.sin(i / duration))
           )
-          .add(new TG.Noise().tint(0, 0, 0))
-          .mul(new TG.SinX().offset(i).frequency(0.025 * Math.tan(i / duration)))
           .add(new TG.Noise().tint(0, 0, 0))
           .mul(new TG.SinY().offset(100).frequency(0.02 * Math.sin(i / duration)))
           .add(new TG.Noise().tint(0, 0, 0))
@@ -314,6 +312,7 @@
           .mul(new TG.SinY().offset(-300).frequency(0.03 * Math.sin(i / duration)))
           .add(new TG.Noise().tint(0, 0, 0))
           .mul(new TG.SinY().offset(300).frequency(0.03 * Math.sin(i / duration)))
+          .add(new TG.Noise().tint(0, 0, 0))
           .toImageData(context);
 
         context.putImageData(texture, 0, 0);
