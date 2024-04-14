@@ -43,7 +43,7 @@
       top: 0px;
       margin: 0px;
       padding: 0px;
-      opacity: 0.1;
+      opacity: 0.08;
       image-rendering: optimizeSpeed;
       image-rendering: -moz-crisp-edges;
       image-rendering: -webkit-optimize-contrast;
@@ -279,7 +279,7 @@
 
       let i = 0;
       const size = 180;
-      const duration = 500;
+      const duration = 900;
       const canvas = document.getElementById("texgen");
       canvas.width = size;
       canvas.height = size;
@@ -304,8 +304,6 @@
           .mul(
             new TG.SinX().offset(-size).frequency(0.04 + 0.02 * Math.sin(i / duration))
           )
-          .add(new TG.Noise().tint(0, 0, 0))
-          .mul(new TG.SinY().offset(100).frequency(0.02 * Math.sin(i / duration)))
           .add(new TG.Noise().tint(0, 0, 0))
           .mul(new TG.SinY().offset(-100).frequency(0.02 * Math.sin(i / duration)))
           .add(new TG.Noise().tint(0, 0, 0))
