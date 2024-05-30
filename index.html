@@ -61,7 +61,7 @@
       width: 300px;
       height: 450px;
       position: relative;
-      background-color: rgb(41 147 161 / 92%);
+      background-color: rgb(133 35 70 / 92%);
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -91,7 +91,7 @@
 
     main header h1 {
       font-size: 24px;
-      color: #17474e;
+      color: #39101f;
       letter-spacing: -1px;
       margin-top: 10px;
       margin-bottom: 0px;
@@ -132,7 +132,7 @@
       padding: 10px;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0px 0px 0px 2px #17474e;
+      box-shadow: 0px 0px 0px 2px #39101f;
     }
 
     footer div a {
@@ -279,9 +279,10 @@
 
       let i = 0;
       const size = 180;
-      const duration = 900;
+      const duration = 600;
       const canvas = document.getElementById("texgen");
-      const orginalRgbColor = {r: 0, g: 0, b: 5};
+      const orginalRgbColor = {r: 4, g: 0, b: 0.5};
+      const secondRgbColor = {r: 0.1, g: 0, b: 0};
       canvas.width = size;
       canvas.height = size;
 
@@ -306,19 +307,19 @@
           .mul(
             new TG.SinX().offset(-size).frequency(0.04 + 0.02 * Math.sin(i / duration))
           )
-          .add(new TG.Noise().tint(0, 0, 0))
+          .add(new TG.Noise().tint(secondRgbColor.r,secondRgbColor.g,secondRgbColor.b))
           .mul(new TG.SinY().offset(-100).frequency(0.02 * Math.sin(i / duration)))
-          .add(new TG.Noise().tint(0, 0, 0))
+          .add(new TG.Noise().tint(secondRgbColor.r,secondRgbColor.g,secondRgbColor.b))
           .mul(new TG.SinY().offset(-300).frequency(0.03 * Math.sin(i / duration)))
-          .add(new TG.Noise().tint(0, 0, 1))
+          .add(new TG.Noise().tint(secondRgbColor.r,secondRgbColor.g,secondRgbColor.b))
           .mul(new TG.SinX().offset(300).frequency(0.03 * Math.sin(i / duration)))
-          .add(new TG.Noise().tint(0, 0, 1))
+          .add(new TG.Noise().tint(secondRgbColor.r,secondRgbColor.g,secondRgbColor.b))
           .mul(new TG.SinY().offset(300).frequency(0.03 * Math.sin(i / duration)))
-          .add(new TG.Noise().tint(0, 0, 0))
+          .add(new TG.Noise().tint(secondRgbColor.r,secondRgbColor.g,secondRgbColor.b))
           .mul(new TG.SinX().offset(300).frequency(0.03 * Math.sin(i / duration)))
-          .add(new TG.Noise().tint(0, 0, 0))
+          .add(new TG.Noise().tint(secondRgbColor.r,secondRgbColor.g,secondRgbColor.b))
           .mul(new TG.SinY().offset(300).frequency(0.03 * Math.sin(i / duration)))
-          .add(new TG.Noise().tint(0, 0, 0))
+          .add(new TG.Noise().tint(secondRgbColor.r,secondRgbColor.g,secondRgbColor.b))
           .toImageData(context);
 
         context.putImageData(texture, 0, 0);
