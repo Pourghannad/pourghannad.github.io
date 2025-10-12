@@ -210,8 +210,8 @@
     <div class="dopdots-wrapper">
       <canvas
         id="dopdots"
-        width="800px"
-        height="800px"
+        width="4000px"
+        height="1900px"
         data-margin="10"
         data-type="grid"
         data-elementsize="6"
@@ -219,7 +219,7 @@
         data-elementrect="true"
         data-secondrect="true"
         data-elementformousemove=".dopdots-wrapper"
-        data-moveradius="380"
+        data-moveradius="300"
         data-secondColor="#0c130b"
       ></canvas>
     </div>
@@ -227,7 +227,7 @@
       <header>
         <img
           src="avatar.jpg"
-          alt="avatar"
+          alt="MohammadHasan Pourghannad"
           title="avatar"
           width="100px"
           height="100px"
@@ -325,7 +325,11 @@
               />
             </svg>
           </a>
-          <a target="_blank" class="goodreads" href="https://www.goodreads.com/user/show/194572640-mohammadhasan-pourghannad">
+          <a
+            target="_blank"
+            class="goodreads"
+            href="https://www.goodreads.com/user/show/194572640-mohammadhasan-pourghannad"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               version="1.1"
@@ -396,8 +400,8 @@
         });
 
         let i = 0;
-        const size = 110;
-        const duration = 900;
+        const size = 350;
+        const duration = 4990;
         const canvas = document.getElementById("texgen");
         const orginalRgbColor = { r: 0, g: 3, b: 0.5 };
         const secondRgbColor = { r: 5, g: 10, b: 10 };
@@ -409,19 +413,21 @@
         function render() {
           const texture = new TG.Texture(size, size)
             .add(new TG.SinX().frequency(0.066 + 0.05 * Math.sin(i / duration)))
-            .add(new TG.SinY().frequency(0.066 + 0.05 * Math.sin(i / duration)))
+            .add(new TG.SinY().offset(100).frequency(0.066 + 0.05 * Math.sin(i / duration)))
             .mul(
               new TG.SinX()
-                .offset(64)
+                .offset(400)
                 .frequency(0.044 + 0.09 * Math.sin(i / duration))
                 .tint(orginalRgbColor.r, orginalRgbColor.g, orginalRgbColor.b)
             )
+            .add(new TG.SinY().offset(400).frequency(0.45 + 1.11 * Math.sin(i / duration)))
             .mul(
               new TG.SinY()
-                .offset(16)
+                .offset(200)
                 .frequency(0.044 + 0.09 * Math.sin(i / duration))
                 .tint(secondRgbColor.r, secondRgbColor.g, secondRgbColor.b)
             )
+            .add(new TG.SinX().frequency(0.061 + 0.05 * Math.sin(i / duration)))
             .sub(new TG.Number().tint(5, 10, 5))
             .toImageData(context);
 
