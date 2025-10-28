@@ -91,7 +91,7 @@
       }
 
       main {
-        width: 300px;
+        width: 330px;
         height: 450px;
         position: relative;
         background-color: rgb(64 101 39 / 92%);
@@ -188,7 +188,8 @@
       }
 
       footer div a svg path,
-      footer div a svg polygon {
+      footer div a svg polygon,
+      footer div a svg ellipse {
         fill: rgb(255 255 255 / 60%);
         transition-property: all;
         transition-duration: 200ms;
@@ -199,7 +200,8 @@
       }
 
       footer div a:hover svg path,
-      footer div a:hover svg polygon {
+      footer div a:hover svg polygon,
+      footer div a:hover svg ellipse {
         fill: rgb(255 255 255 / 100%);
       }
     </style>
@@ -347,6 +349,65 @@
               />
             </svg>
           </a>
+          <a target="_blank" href="https://letterboxd.com/pourghannad/">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              version="1.1"
+              viewBox="118 46 262 97"
+            >
+              <g
+                id="letterboxd-logo-v-pos-rgb"
+                stroke="none"
+                stroke-width="1"
+                fill="none"
+                fill-rule="evenodd"
+              >
+                <g
+                  id="Vertical-Lockup"
+                  transform="translate(60.000000, 46.000000)"
+                >
+                  <g id="Dots" transform="translate(58.000000, 0.000000)">
+                    <ellipse
+                      id="Blue"
+                      fill="#fff"
+                      cx="213.426966"
+                      cy="48.5"
+                      rx="48.5730337"
+                      ry="48.5"
+                    />
+                    <ellipse
+                      id="Green"
+                      fill="#fff"
+                      cx="131"
+                      cy="48.5"
+                      rx="48.5730337"
+                      ry="48.5"
+                    />
+                    <ellipse
+                      id="Orange"
+                      fill="#fff"
+                      cx="48.5730337"
+                      cy="48.5"
+                      rx="48.5730337"
+                      ry="48.5"
+                    />
+                    <path
+                      d="M89.7865169,74.1788779 C85.1226166,66.7319256 82.4269663,57.9300104 82.4269663,48.499439 C82.4269663,39.0688676 85.1226166,30.2669524 89.7865169,22.82 C94.4504171,30.2669524 97.1460674,39.0688676 97.1460674,48.499439 C97.1460674,57.9300104 94.4504171,66.7319256 89.7865169,74.1788779 Z"
+                      id="Overlap"
+                      fill="#556677"
+                    />
+                    <path
+                      d="M172.213483,22.82 C176.877383,30.2669524 179.573034,39.0688676 179.573034,48.499439 C179.573034,57.9300104 176.877383,66.7319256 172.213483,74.1788779 C167.549583,66.7319256 164.853933,57.9300104 164.853933,48.499439 C164.853933,39.0688676 167.549583,30.2669524 172.213483,22.82 Z"
+                      id="Overlap"
+                      fill="#556677"
+                    />
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </a>
+
           <a target="_blank" href="mailto:hasan@pourghannad.ir">
             <svg
               width="20"
@@ -413,14 +474,22 @@
         function render() {
           const texture = new TG.Texture(size, size)
             .add(new TG.SinX().frequency(0.066 + 0.05 * Math.sin(i / duration)))
-            .add(new TG.SinY().offset(100).frequency(0.066 + 0.05 * Math.sin(i / duration)))
+            .add(
+              new TG.SinY()
+                .offset(100)
+                .frequency(0.066 + 0.05 * Math.sin(i / duration))
+            )
             .mul(
               new TG.SinX()
                 .offset(400)
                 .frequency(0.044 + 0.09 * Math.sin(i / duration))
                 .tint(orginalRgbColor.r, orginalRgbColor.g, orginalRgbColor.b)
             )
-            .add(new TG.SinY().offset(400).frequency(0.45 + 1.11 * Math.sin(i / duration)))
+            .add(
+              new TG.SinY()
+                .offset(400)
+                .frequency(0.45 + 1.11 * Math.sin(i / duration))
+            )
             .mul(
               new TG.SinY()
                 .offset(200)
