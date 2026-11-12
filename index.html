@@ -1,488 +1,867 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pourghannad</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css?family=Oswald"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Oswald"
-    />
-    <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png" />
-    <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png" />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="apple-icon-114x114.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="apple-icon-120x120.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="apple-icon-144x144.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="apple-icon-152x152.png"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="apple-icon-180x180.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="android-icon-192x192.png"
-    />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-    <link rel="manifest" href="manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-    <meta name="theme-color" content="#ffffff" />
-    <style>
+
+<head>
+  <!-- Essential Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO Meta Tags -->
+  <title>MohammadHasan Pourghannad | Senior Front-End Developer</title>
+  <meta name="description"
+    content="Portfolio of MohammadHasan Pourghannad, a Senior Front-End Developer specializing in performant, accessible, and delightful web experiences. Always trying to improve." />
+  <meta name="keywords"
+    content="MohammadHasan Pourghannad, Front-End Developer, Senior Developer, Web Developer, UI/UX, React, JavaScript, CSS, HTML, Portfolio" />
+  <meta name="author" content="MohammadHasan Pourghannad" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.pourghannad.ir/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.pourghannad.ir/" />
+  <meta property="og:title" content="MohammadHasan Pourghannad | Senior Front-End Developer" />
+  <meta property="og:description"
+    content="Architecting performant, accessible, and delightful web experiences. Always trying to improve." />
+  <meta property="og:site_name" content="MohammadHasan Pourghannad" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://www.pourghannad.ir/" />
+  <meta name="twitter:title" content="MohammadHasan Pourghannad | Senior Front-End Developer" />
+  <meta name="twitter:description"
+    content="Architecting performant, accessible, and delightful web experiences. Always trying to improve." />
+  <meta name="twitter:creator" content="@pourghannad" />
+
+  <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="android-icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="msapplication-TileColor" content="#000000" />
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+  <meta name="theme-color" content="#000000" />
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "MohammadHasan Pourghannad",
+    "jobTitle": "Senior Front-End Developer",
+    "url": "https://www.pourghannad.ir/",
+    "sameAs": [
+      "https://www.linkedin.com/in/pourghannad",
+      "https://twitter.com/pourghannad",
+      "https://github.com/pourghannad"
+    ]
+  }
+  </script>
+
+  <!-- Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Syne:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0B0F19;
+      --text-main: #F8FAFC;
+      --text-muted: #94A3B8;
+      --accent: #3B82F6;
+      --border: rgba(248, 250, 252, 0.15);
+      --font-display: 'Syne', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: var(--font-display);
+      overflow-x: hidden;
+      overflow-y: auto;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      /* Added more padding to the body */
+      padding: 30px 24px;
+    }
+
+    /* Accessibility: Skip Link */
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 0 0 8px 8px;
+      z-index: 9999;
+      text-decoration: none;
+      font-family: var(--font-mono);
+      transition: top 0.3s ease;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* Background Canvas */
+    #bg-canvas {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .noise {
+      position: fixed;
+      inset: 0;
+      background: url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)" opacity="0.05"/%3E%3C/svg%3E');
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    /* Layout Container - Made narrower and added internal padding */
+    .container {
+      width: 100%;
+      max-width: 750px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      z-index: 10;
+      gap: 30px;
+      padding: 20px 10px;
+      margin: auto;
+    }
+
+    h1 {
+      /* Adjusted base font size */
+      font-size: clamp(2rem, 8vw, 5.5rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+      color: var(--text-main);
+      width: 100%;
+    }
+
+    h1 .outline {
+      color: transparent;
+      -webkit-text-stroke: 2px var(--text-main);
+    }
+
+    /* Force POURGHANNAD to stay on one line */
+    .nowrap-name {
+      display: block;
+      white-space: nowrap;
+    }
+
+    .subtitle {
+      font-family: var(--font-mono);
+      font-size: clamp(0.75rem, 2vw, 0.95rem);
+      color: var(--text-muted);
+      line-height: 1.8;
+      max-width: 600px;
+      margin-top: 10px;
+      padding: 0 10px;
+    }
+
+    .subtitle .motto {
+      color: var(--accent);
+      display: block;
+      margin-top: 8px;
+      font-weight: 700;
+    }
+
+    .action-area {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 35px;
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    /* Social Links */
+    .socials {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+      width: 100%;
+      padding: 0 10px;
+    }
+
+    .socials a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(5px);
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .socials a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    .socials a:hover {
+      color: #fff;
+      background: var(--accent);
+      border-color: var(--accent);
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 15px 25px rgba(59, 130, 246, 0.3);
+    }
+
+    .socials svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    /* Creative Shutter Button */
+    .btn-creative {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 280px;
+      height: 60px;
+      border: 1px solid var(--text-main);
+      color: var(--text-main);
+      text-decoration: none;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      overflow: hidden;
+      border-radius: 4px;
+      background: transparent;
+      transition: border-color 0.4s ease;
+    }
+
+    .btn-creative:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    .btn-creative::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--accent);
+      transform: scaleY(0);
+      transform-origin: bottom;
+      transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+      z-index: 1;
+    }
+
+    .btn-text-top,
+    .btn-text-bottom {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+      z-index: 2;
+    }
+
+    .btn-text-bottom {
+      transform: translateY(100%);
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .btn-creative:hover {
+      border-color: var(--accent);
+    }
+
+    .btn-creative:hover::before {
+      transform: scaleY(1);
+      transform-origin: top;
+    }
+
+    .btn-creative:hover .btn-text-top {
+      transform: translateY(-100%);
+    }
+
+    .btn-creative:hover .btn-text-bottom {
+      transform: translateY(0);
+    }
+
+    /* Easter Egg Terminal */
+    .terminal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(11, 15, 25, 0.9);
+      backdrop-filter: blur(10px);
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+      padding: 15px;
+    }
+
+    .terminal-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .terminal {
+      width: 100%;
+      max-width: 700px;
+      background: #000;
+      border: 1px solid var(--accent);
+      border-radius: 8px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(59, 130, 246, 0.2);
+      font-family: var(--font-mono);
+      overflow: hidden;
+      transform: translateY(20px) scale(0.95);
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .terminal-overlay.active .terminal {
+      transform: translateY(0) scale(1);
+    }
+
+    .term-header {
+      background: #111;
+      padding: 12px 15px;
+      display: flex;
+      gap: 8px;
+      border-bottom: 1px solid #222;
+      flex-shrink: 0;
+    }
+
+    .term-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .term-dot.red {
+      background: #ff5f56;
+    }
+
+    .term-dot.yellow {
+      background: #ffbd2e;
+    }
+
+    .term-dot.green {
+      background: #27c93f;
+    }
+
+    .term-body {
+      padding: 20px;
+      color: #38BDF8;
+      font-size: clamp(0.75rem, 2vw, 0.95rem);
+      line-height: 1.7;
+      text-align: left;
+      word-break: break-word;
+      max-height: 70vh;
+      overflow-y: auto;
+    }
+
+    .blinking-cursor {
+      display: inline-block;
+      width: 10px;
+      height: 18px;
+      background-color: #38BDF8;
+      animation: blink 1s step-end infinite;
+      vertical-align: bottom;
+      margin-left: 5px;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+
+    /* Accessibility: Prefers Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+
+      #bg-canvas {
+        display: none;
+      }
+    }
+
+    /* --- RESPONSIVE DESIGN TWEAKS --- */
+
+    @media (max-width: 768px) {
+      .container {
+        gap: 25px;
+      }
+
+      .action-area {
+        gap: 25px;
+      }
+    }
+
+    @media (max-width: 480px) {
       body {
-        margin: 0px;
-        background-color: #030902;
-        display: flex;
+        padding: 20px 16px;
+      }
+
+      .container {
+        gap: 20px;
+      }
+
+      h1 {
+        -webkit-text-stroke: 1.5px var(--text-main);
+      }
+
+      .socials a {
+        width: 45px;
+        height: 45px;
+      }
+
+      .btn-creative {
+        height: 55px;
+        font-size: 0.75rem;
+      }
+    }
+
+    /* Ultra-Small Screens (Down to 320px) */
+    @media (max-width: 360px) {
+      body {
+        padding: 15px 12px;
+      }
+
+      .container {
+        gap: 15px;
+      }
+
+      h1 {
+        -webkit-text-stroke: 1px var(--text-main);
+      }
+
+      .subtitle {
+        font-size: 0.7rem;
+        line-height: 1.6;
+      }
+
+      .socials {
+        gap: 10px;
+      }
+
+      .socials a {
+        width: 40px;
+        height: 40px;
+      }
+
+      .socials svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      .btn-creative {
+        height: 50px;
+        font-size: 0.7rem;
+        max-width: 100%;
+      }
+
+      .term-body {
+        font-size: 0.7rem;
+        padding: 12px;
+      }
+
+      .term-header {
+        padding: 8px 10px;
+      }
+
+      .term-dot {
+        width: 8px;
+        height: 8px;
+      }
+    }
+
+    /* Landscape Mode on Mobile */
+    @media (max-height: 500px) and (orientation: landscape) {
+      .container {
+        padding: 10px 0;
+        gap: 10px;
+      }
+
+      .action-area {
+        gap: 15px;
+        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
-        height: 100vh;
-        font-family: Oswald;
       }
 
-      canvas#texgen {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        left: 0px;
-        top: 0px;
-        margin: 0px;
-        padding: 0px;
-        opacity: 0.02;
-        image-rendering: optimizeSpeed;
-        image-rendering: -moz-crisp-edges;
-        image-rendering: -webkit-optimize-contrast;
-        image-rendering: optimize-contrast;
-        -ms-interpolation-mode: nearest-neighbor;
+      .socials {
+        width: auto;
       }
 
-      .dopdots-wrapper {
-        position: fixed;
-        z-index: 2;
-        opacity: 0.1;
+      .btn-creative {
+        max-width: 200px;
+        height: 45px;
       }
 
-      main {
-        width: 330px;
-        height: 450px;
-        position: relative;
-        background-color: rgb(64 101 39 / 92%);
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        transition-duration: 250ms;
-        transition-property: border-radius;
-        transition-delay: 55ms;
-        z-index: 3;
+      .term-body {
+        max-height: 50vh;
       }
+    }
+  </style>
+</head>
 
-      a.hover {
-        transition-property: color;
-        transition-duration: 200ms;
-      }
+<body>
 
-      a.hover:hover {
-        color: rgb(255 255 255 / 80%);
-      }
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-      main header {
-        margin-top: 20px;
-      }
+  <canvas id="bg-canvas" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
 
-      main header img {
-        box-shadow: 0px 10px 30px -5px rgb(0 0 0 / 40%), 0 0 0 2px #0d2736;
-      }
+  <main id="main-content" class="container">
 
-      main header h1 {
-        font-size: 24px;
-        color: rgb(0 0 0 / 60%);
-        letter-spacing: -1px;
-        margin-top: 10px;
-        margin-bottom: 0px;
-      }
+    <header>
+      <h1 id="main-title">
+        MOHAMMAD<br>
+        <span class="outline">HASAN</span><br>
+        <span class="nowrap-name">POURGHANNAD</span>
+      </h1>
 
-      main header h3 {
-        font-size: 16px;
-        font-weight: 400;
-        margin: 0;
-        color: rgb(255 255 255 / 30%);
-      }
+      <p class="subtitle">
+        // Senior Front-End Developer<br>
+        Architecting performant, accessible, and delightful web experiences.
+        <span class="motto">// Always trying to improve.</span>
+      </p>
+    </header>
 
-      main header h3 small {
-        font-size: 0.9em;
-        text-shadow: 2px 0px 0px rgb(14 39 54 / 15%);
-      }
+    <section class="action-area">
+      <nav class="socials" aria-label="Social Media Links">
+        <a href="https://www.linkedin.com/in/pourghannad" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn Profile">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+          </svg>
+        </a>
+        <a href="https://twitter.com/pourghannad" target="_blank" rel="noopener noreferrer"
+          aria-label="X (Twitter) Profile">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+          </svg>
+        </a>
+        <a href="https://github.com/pourghannad" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+          </svg>
+        </a>
+        <a href="mailto:hasan@pourghannad.ir" aria-label="Send Email">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z" />
+          </svg>
+        </a>
+      </nav>
 
-      footer {
-        display: flex;
-        justify-content: center;
-      }
+      <a href="https://www.pourghannad.ir/portfolio" target="_blank" rel="noopener noreferrer" class="btn-creative"
+        aria-label="View Portfolio Website">
+        <span class="btn-text-top" aria-hidden="true">View Portfolio</span>
+        <span class="btn-text-bottom" aria-hidden="true">Let's Go ↗</span>
+      </a>
+    </section>
 
-      footer > a {
-        position: absolute;
-        font-size: 10px;
-        font-weight: normal;
-        letter-spacing: 2px;
-        bottom: 24px;
-        left: 0;
-        right: 0;
-        color: rgb(255 255 255 / 56%);
-      }
+  </main>
 
-      footer div {
-        display: flex;
-        background-color: rgb(255 255 255 / 10%);
-        width: 83%;
-        padding: 10px;
-        justify-content: space-between;
-        align-items: center;
-        box-shadow: 0px 0px 0px 2px rgb(0 0 0 / 50%);
-      }
-
-      footer div a {
-        width: 20px;
-        height: 20px;
-        color: rgb(255 255 255 / 60%);
-        line-height: 20px;
-        text-decoration: none;
-        transition-property: color;
-        transition-duration: 200ms;
-      }
-
-      footer div a:hover {
-        color: rgb(255 255 255 / 100%);
-      }
-
-      footer div a svg {
-        width: 100%;
-        height: 100%;
-      }
-
-      footer div a svg path,
-      footer div a svg polygon,
-      footer div a svg ellipse {
-        fill: rgb(255 255 255 / 60%);
-        transition-property: all;
-        transition-duration: 200ms;
-      }
-
-      footer div a.goodreads svg path:last-of-type {
-        fill: #52713f;
-      }
-
-      footer div a:hover svg path,
-      footer div a:hover svg polygon,
-      footer div a:hover svg ellipse {
-        fill: rgb(255 255 255 / 100%);
-      }
-    </style>
-  </head>
-
-  <body>
-    <canvas id="texgen"></canvas>
-    <div class="dopdots-wrapper">
-      <canvas
-        id="dopdots"
-        width="4000px"
-        height="1900px"
-        data-margin="10"
-        data-type="grid"
-        data-elementsize="6"
-        data-color="#3c3c3c"
-        data-elementrect="true"
-        data-secondrect="true"
-        data-elementformousemove=".dopdots-wrapper"
-        data-moveradius="300"
-        data-secondColor="#0c130b"
-      ></canvas>
+  <div class="terminal-overlay" id="terminal-overlay" role="dialog" aria-modal="true" aria-label="Terminal Easter Egg"
+    aria-hidden="true">
+    <div class="terminal">
+      <div class="term-header" aria-hidden="true">
+        <div class="term-dot red"></div>
+        <div class="term-dot yellow"></div>
+        <div class="term-dot green"></div>
+      </div>
+      <div class="term-body" id="term-body" aria-live="polite"></div>
     </div>
-    <main>
-      <header>
-        <img
-          src="avatar.jpg"
-          alt="MohammadHasan Pourghannad"
-          title="avatar"
-          width="100px"
-          height="100px"
-        />
-        <h1>MohammadHasan Pourghannad</h1>
-        <h3>Front-End Developer <small>Trying to improve</small></h3>
-      </header>
-      <footer>
-        <div>
-          <a target="_blank" aria-label="Linkedin" title="Linkedin" href="https://www.linkedin.com/in/pourghannad">
-            <svg width="24" height="24" viewBox="0 0 24 24">
-              <path
-                d="M6.80891 21.4996H2.81797V8.64761H6.80891V21.4996ZM4.81129 6.89449C3.53512 6.89449 2.5 5.83746 2.5 4.56129C2.5 3.9483 2.74351 3.36041 3.17696 2.92696C3.61041 2.49351 4.1983 2.25 4.81129 2.25C5.42428 2.25 6.01217 2.49351 6.44562 2.92696C6.87907 3.36041 7.12258 3.9483 7.12258 4.56129C7.12258 5.83746 6.08703 6.89449 4.81129 6.89449ZM21.7457 21.4996H17.7634V15.2433C17.7634 13.7523 17.7333 11.8402 15.6884 11.8402C13.6134 11.8402 13.2955 13.4601 13.2955 15.1359V21.4996H9.30883V8.64761H13.1365V10.4007H13.1923C13.7252 9.39097 15.0267 8.32535 16.9684 8.32535C21.0075 8.32535 21.75 10.9851 21.75 14.4398V21.4996H21.7457Z"
-                fill="#0A66C2"
-              ></path>
-            </svg>
-          </a>
-          <a target="_blank" aria-label="Twitter" title="Twitter" href="https://twitter.com/pourghannad">
-            <svg width="24" height="24" viewBox="0 0 24 24">
-              <path
-                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
-              ></path>
-            </svg>
-          </a>
-          <a target="_blank" aria-label="Github" title="Github" href="https://github.com/pourghannad">
-            <svg
-              aria-hidden="true"
-              viewBox="0 0 16 16"
-              version="1.1"
-              width="32"
-              height="32"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
-              ></path>
-            </svg>
-          </a>
-          <a target="_blank" aria-label="SoundCloud" title="SoundCloud" href="https://soundcloud.com/pourghannad">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 3333.34 1447.66"
-              shape-rendering="geometricPrecision"
-              text-rendering="geometricPrecision"
-              image-rendering="optimizeQuality"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-            >
-              <defs>
-                <linearGradient
-                  id="a"
-                  gradientUnits="userSpaceOnUse"
-                  x1="1649.01"
-                  y1=".02"
-                  x2="1649.01"
-                  y2="1447.48"
-                >
-                  <stop offset="0" stop-color="#f79810" />
-                  <stop offset="1" stop-color="#f8310e" />
-                </linearGradient>
-              </defs>
-              <path
-                d="M37.75 865.82c-6.95 0-12.48 5.38-13.37 13.05L.01 1064.02l24.37 181.96c.89 7.67 6.42 13.01 13.37 13.01 6.73 0 12.22-5.31 13.3-12.94v-.04.04l28.9-182.04-28.9-185.19c-1.04-7.61-6.61-12.99-13.3-12.99zm137.07-101.17c-1.15-7.95-6.84-13.44-13.87-13.44-7.06 0-12.91 5.67-13.87 13.44 0 .07-32.76 299.36-32.76 299.36l32.76 292.74c.93 7.85 6.77 13.51 13.87 13.51 6.99 0 12.69-5.52 13.83-13.44l37.29-292.8-37.24-299.36zm516.36-276.14c-13.44 0-24.55 11-25.2 24.98l-26.09 550.78 26.09 355.93c.68 13.92 11.76 24.88 25.2 24.88 13.37 0 24.44-11 25.24-24.96v.11l29.51-355.97-29.51-550.78c-.8-13.96-11.87-24.97-25.24-24.97zM423.93 679.94c-10.32 0-18.75 8.25-19.57 19.25l-29.4 364.94 29.4 353.07c.78 10.93 9.25 19.19 19.57 19.19 10.22 0 18.65-8.25 19.54-19.19l33.41-353.07-33.41-365.01c-.89-10.93-9.32-19.19-19.54-19.19zm538.84 765.11c16.66 0 30.21-13.44 30.9-30.65l25.59-349.95-25.57-733.26c-.68-17.21-14.22-30.65-30.91-30.65-16.81 0-30.4 13.48-30.93 30.69 0 .04-22.7 733.2-22.7 733.2l22.7 350.09c.54 17.06 14.12 30.54 30.91 30.54zm556 1.65c22.94 0 41.87-18.89 42.3-42.13v.26-.26l17.86-339.91-17.86-846.87c-.39-23.2-19.36-42.13-42.3-42.13-22.98 0-41.95 18.89-42.3 42.17l-15.95 846.55c0 .54 15.95 340.41 15.95 340.41.35 23.01 19.35 41.91 42.3 41.91zm-280.12-1.33c19.97 0 36.07-16.03 36.59-36.46v.26l21.72-344.64-21.74-738.59c-.54-20.43-16.64-36.42-36.59-36.42-20.11 0-36.2 15.99-36.64 36.42l-19.32 738.62 19.36 344.58c.42 20.21 16.52 36.24 36.63 36.24zm-681.62-3.22c11.87 0 21.48-9.5 22.37-22.02l31.47-356.01-31.47-338.65c-.87-12.5-10.48-21.93-22.37-21.93-12.04 0-21.65 9.5-22.41 22.08l-27.71 338.52 27.71 355.97c.8 12.55 10.37 22.04 22.41 22.04zm-265.13-19.51c8.67 0 15.7-6.84 16.71-16.31l35.35-342.27-35.31-355.18c-1.04-9.5-8.06-16.35-16.75-16.35-8.78 0-15.81 6.88-16.7 16.35 0 .04-31.12 355.18-31.12 355.18l31.12 342.21c.85 9.5 7.89 16.38 16.7 16.38zM1378.17 313.65c-21.69 0-39.07 17.24-39.51 39.32l-17.64 711.61 17.64 342.42c.43 21.8 17.78 39.04 39.51 39.04 21.65 0 38.93-17.21 39.43-39.29v.28l19.8-342.42-19.8-711.71c-.5-22-17.78-39.25-39.43-39.25zM826.46 1445.77c14.98 0 27.35-12.22 28.07-27.81l27.53-353.57-27.53-676.74c-.76-15.63-13.09-27.81-28.07-27.81-15.13 0-27.46 12.22-28.1 27.81 0 .04-24.37 676.74-24.37 676.74l24.42 353.71c.61 15.46 12.94 27.68 28.06 27.68zm307.44-33.37v-.18l23.66-347.73-23.66-757.97c-.57-18.82-15.42-33.59-33.74-33.59-18.43 0-33.26 14.73-33.76 33.59l-21 757.94 21.04 347.91c.5 18.64 15.34 33.37 33.74 33.37 18.36 0 33.13-14.73 33.74-33.48l-.01.13zm1789.47-784.83c-56.17 0-109.78 11.37-158.59 31.84C2732.15 289.89 2422.28.01 2044.3.01c-92.48 0-182.65 18.21-262.26 49.01-30.93 11.98-39.19 24.31-39.47 48.22v1301.29c.33 25.09 19.8 46 44.28 48.46 1.04.11 1129.18.68 1136.49.68 226.41 0 409.99-183.58 409.99-410.03 0-226.45-183.55-410.07-409.96-410.07zM1658.76 96.09c-24.63 0-44.85 20.22-45.2 45.07l-18.5 923.63L1613.6 1400c.33 24.48 20.54 44.67 45.17 44.67 24.55 0 44.78-20.19 45.13-45.02v.39l20.11-335.25-20.12-923.7c-.37-24.77-20.58-45-45.13-45z"
-                fill="url(#a)"
-                fill-rule="nonzero"
-              />
-            </svg>
-          </a>
-          <a
-            target="_blank"
-            class="goodreads"
-            aria-label="Goodreads"
-            title="Goodreads"
-            href="https://www.goodreads.com/user/show/194572640-mohammadhasan-pourghannad"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              version="1.1"
-              viewBox="133.09 62.73 152.03 255.67"
-            >
-              <path
-                d="M0 0 C3.83084349 2.61193874 6.65161815 5.67823629 8.75 9.875 C9.13548076 15.65721136 8.74854084 18.7574903 5.75 23.875 C-0.07900554 30.22163924 -7.30574015 35.34065637 -14.171875 40.515625 C-15.69554687 41.68351562 -15.69554687 41.68351562 -17.25 42.875 C-17.81549561 43.30200195 -18.38099121 43.72900391 -18.96362305 44.16894531 C-20.44990172 45.33449954 -21.85672313 46.59972727 -23.25 47.875 C-23.72256546 52.78968077 -22.05619668 55.35143217 -19.0625 59 C-18.43601562 59.7528125 -17.80953125 60.505625 -17.1640625 61.28125 C-6.96260744 75.10526257 -5.11819198 92.43256847 -7.57080078 109.04833984 C-8.38504244 112.83659174 -9.69224098 116.33695256 -11.25 119.875 C-11.62382812 120.76058594 -11.99765625 121.64617187 -12.3828125 122.55859375 C-15.18867524 128.66273884 -18.86963873 133.80445576 -23.25 138.875 C-23.82234375 139.55433594 -24.3946875 140.23367187 -24.984375 140.93359375 C-35.54846161 152.51345791 -51.48854934 159.03579106 -66.91796875 160.13671875 C-75.4728291 160.46250774 -82.78876269 159.32011635 -90.9453125 156.75 C-94.28735396 155.86510959 -96.81798332 155.46527891 -100.25 155.875 C-102.1820847 157.18593006 -102.1820847 157.18593006 -103.625 159.1875 C-104.2025 159.91324219 -104.78 160.63898438 -105.375 161.38671875 C-106.303125 162.61841797 -106.303125 162.61841797 -107.25 163.875 C-107.971875 164.78894531 -108.69375 165.70289063 -109.4375 166.64453125 C-114.4244609 173.07187364 -114.4244609 173.07187364 -116.25 180.875 C-115.28142765 182.06328999 -115.28142765 182.06328999 -113.52471924 181.98852539 C-112.77309509 181.98328857 -112.02147095 181.97805176 -111.24707031 181.97265625 C-110.39397278 181.96935303 -109.54087524 181.9660498 -108.66192627 181.96264648 C-107.72677185 181.95434814 -106.79161743 181.9460498 -105.828125 181.9375 C-104.85832703 181.93371338 -103.88852905 181.92992676 -102.88934326 181.92602539 C-98.73704747 181.90975718 -94.58484994 181.88225306 -90.43261719 181.85449219 C-79.53703172 181.78786325 -68.66065621 181.79431126 -57.7734375 182.2734375 C-56.52001556 182.32443604 -56.52001556 182.32443604 -55.24127197 182.37646484 C-41.82376244 183.05126874 -28.91559627 186.15198353 -19.1640625 195.9765625 C-13.28649071 202.99492881 -9.44933004 210.94197304 -9.859375 220.2265625 C-11.60423762 232.05673106 -16.75451509 240.75338632 -26.25 247.875 C-34.09594054 252.78631549 -42.21406178 254.17775316 -51.32470703 254.1496582 C-52.19405884 254.15476913 -53.06341064 254.15988007 -53.95910645 254.16514587 C-56.80874675 254.17895175 -59.6581429 254.17809258 -62.5078125 254.17578125 C-64.49982797 254.17967179 -66.49184262 254.1840072 -68.4838562 254.18876648 C-72.64795631 254.19620831 -76.81197159 254.19595123 -80.97607422 254.19067383 C-86.30687744 254.18486752 -91.63733454 254.20184815 -96.96808052 254.2250185 C-101.07736229 254.23975819 -105.18656059 254.24062746 -109.29586411 254.23750877 C-111.2614193 254.23802139 -113.22697924 254.24324794 -115.1925087 254.25332069 C-117.93992866 254.26567874 -120.68667263 254.25889834 -123.43408203 254.24731445 C-124.24150848 254.25495819 -125.04893494 254.26260193 -125.88082886 254.27047729 C-131.82999353 254.2151305 -135.67823143 252.63463112 -140.625 249.25 C-142.76110243 246.12800413 -142.87294242 243.85883521 -142.70703125 240.12890625 C-141.8244788 235.77648946 -139.20665024 233.19137339 -135.54296875 230.7265625 C-132.25702249 229.50622811 -129.30550409 229.64941968 -125.8125 229.6875 C-124.51441406 229.69394531 -123.21632812 229.70039063 -121.87890625 229.70703125 C-118.25 229.875 -118.25 229.875 -115.89331055 230.35131836 C-104.22848384 232.66230508 -91.78671973 232.09149421 -79.94433594 232.11523438 C-76.9912592 232.12502899 -74.03885464 232.15620045 -71.0859375 232.1875 C-69.17708738 232.19402468 -67.26823239 232.19927725 -65.359375 232.203125 C-64.49246033 232.2154718 -63.62554565 232.2278186 -62.73236084 232.24053955 C-55.14465309 232.21326737 -47.90443055 230.64595755 -41.25 226.875 C-38.37137749 222.61207177 -38.61568372 217.82106111 -39.25 212.875 C-41.33313964 208.95869747 -43.87885639 207.05293941 -48.03962708 205.49319458 C-57.34527391 202.89060188 -66.82006216 202.6179731 -76.41770363 202.78580093 C-78.51707879 202.82132869 -80.61613534 202.84140474 -82.71574402 202.8576355 C-88.67400059 202.90592815 -94.6318169 202.97786206 -100.58959961 203.06689453 C-104.26148911 203.12071041 -107.93314144 203.15461776 -111.6053524 203.17663193 C-112.99158287 203.18895331 -114.37776954 203.20883892 -115.76377296 203.2367897 C-131.3828764 203.54945049 -131.3828764 203.54945049 -137.79450989 197.39163208 C-142.45314643 192.11047297 -142.78637232 187.28078354 -142.7109375 180.4765625 C-141.38105361 170.08543583 -133.78928181 161.57428718 -127.38671875 153.65234375 C-124.06741553 149.33785638 -122.70538432 146.57557548 -122.85791016 140.93994141 C-123.57066784 137.18620264 -125.9339918 134.828231 -128.4375 132.0625 C-133.25928646 126.3672405 -136.60932187 120.90537683 -139.25 113.875 C-139.59933594 113.09253906 -139.94867188 112.31007813 -140.30859375 111.50390625 C-145.02457276 98.33438809 -143.63433108 79.57367179 -137.9609375 67.0234375 C-128.99388791 49.61681182 -114.59627825 37.24950765 -96.3125 30.375 C-82.01072262 26.38462755 -65.41864591 27.60572445 -51.875 33.4375 C-50.85664063 33.87191406 -49.83828125 34.30632812 -48.7890625 34.75390625 C-47.26129238 35.42847552 -45.74375372 36.12812314 -44.25 36.875 C-41.9170134 36.91522391 -39.58293334 36.91820247 -37.25 36.875 C-35.91127338 34.54462403 -34.57831552 32.21130895 -33.25 29.875 C-32.84209229 29.16037598 -32.43418457 28.44575195 -32.01391602 27.70947266 C-29.53890188 23.32340807 -27.2822722 18.89522971 -25.16235352 14.328125 C-19.75418846 2.79937446 -13.36934201 -4.62784916 0 0 Z "
-                fill="#201B17"
-                transform="translate(276.25,64.125)"
-              />
-              <path
-                d="M0 0 C8.31042452 5.84587169 13.80998188 13.00049004 16 23 C17.96100006 43.70220317 12.44638217 61.33570829 -0.3125 77.875 C-4.63295662 82.91553272 -9.25853452 86.68543687 -15 90 C-15.598125 90.35964844 -16.19625 90.71929687 -16.8125 91.08984375 C-24.30437845 94.71872238 -35.00738392 94.08929805 -43.0078125 92.34375 C-54.59452497 88.13040001 -61.23106287 80.03534932 -66.875 69.5 C-71.19131607 56.65382121 -67.76173851 41.3229687 -62.02685547 29.61865234 C-57.98817168 21.75186472 -53.44542628 15.13355082 -47 9 C-46.01386719 8.01966797 -46.01386719 8.01966797 -45.0078125 7.01953125 C-32.81298529 -4.46515542 -15.15545735 -8.44245447 0 0 Z "
-                fill="#52713f"
-                transform="translate(227,114)"
-              />
-            </svg>
-          </a>
-          <a target="_blank" aria-label="Letterboxd" title="Letterboxd" href="https://letterboxd.com/pourghannad/">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              version="1.1"
-              viewBox="118 46 262 97"
-            >
-              <g
-                id="letterboxd-logo-v-pos-rgb"
-                stroke="none"
-                stroke-width="1"
-                fill="none"
-                fill-rule="evenodd"
-              >
-                <g
-                  id="Vertical-Lockup"
-                  transform="translate(60.000000, 46.000000)"
-                >
-                  <g id="Dots" transform="translate(58.000000, 0.000000)">
-                    <ellipse
-                      id="Blue"
-                      fill="#fff"
-                      cx="213.426966"
-                      cy="48.5"
-                      rx="48.5730337"
-                      ry="48.5"
-                    />
-                    <ellipse
-                      id="Green"
-                      fill="#fff"
-                      cx="131"
-                      cy="48.5"
-                      rx="48.5730337"
-                      ry="48.5"
-                    />
-                    <ellipse
-                      id="Orange"
-                      fill="#fff"
-                      cx="48.5730337"
-                      cy="48.5"
-                      rx="48.5730337"
-                      ry="48.5"
-                    />
-                    <path
-                      d="M89.7865169,74.1788779 C85.1226166,66.7319256 82.4269663,57.9300104 82.4269663,48.499439 C82.4269663,39.0688676 85.1226166,30.2669524 89.7865169,22.82 C94.4504171,30.2669524 97.1460674,39.0688676 97.1460674,48.499439 C97.1460674,57.9300104 94.4504171,66.7319256 89.7865169,74.1788779 Z"
-                      id="Overlap"
-                      fill="#556677"
-                    />
-                    <path
-                      d="M172.213483,22.82 C176.877383,30.2669524 179.573034,39.0688676 179.573034,48.499439 C179.573034,57.9300104 176.877383,66.7319256 172.213483,74.1788779 C167.549583,66.7319256 164.853933,57.9300104 164.853933,48.499439 C164.853933,39.0688676 167.549583,30.2669524 172.213483,22.82 Z"
-                      id="Overlap"
-                      fill="#556677"
-                    />
-                  </g>
-                </g>
-              </g>
-            </svg>
-          </a>
+  </div>
 
-          <a target="_blank" aria-label="Email" title="Email" href="mailto:hasan@pourghannad.ir">
-            <svg
-              width="20"
-              height="20"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-            >
-              <path d="M22,19H2V5H22ZM4,17H20V7H4Z" />
-              <polygon
-                points="12 13.25 3.4 6.8 4.6 5.2 12 10.75 19.4 5.2 20.6 6.8 12 13.25"
-              />
-            </svg>
-          </a>
-        </div>
-        <a target="_blank" aria-label="Portfolio" title="Portfolio" href="https://www.pourghannad.ir/portfolio"
-          >Portfolio</a
-        >
-      </footer>
-    </main>
-    <script src="TexGen.js"></script>
-    <script src="./dopdots.bundle.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        dopDots(document.getElementById("dopdots").getContext("2d"));
-        const movementOffset = 8;
-        const maxMovement = 75;
+  <script>
+    // --- 1. BULLETPROOF TEXT SCALING (ENSURES POURGHANNAD NEVER WRAPS) ---
+    function adjustTitleSize() {
+      const h1 = document.getElementById('main-title');
+      const container = document.querySelector('.container');
 
-        const main = document.querySelector("main");
-        main.addEventListener("mousemove", (e) => {
-          const moveX = Math.abs(Math.abs(e.movementX) - movementOffset);
-          const moveY = Math.abs(Math.abs(e.movementY) - movementOffset);
-          const radiusX = moveX > maxMovement ? maxMovement : moveX;
-          const radiusY = moveY > maxMovement ? maxMovement : moveY;
-          main.style.borderRadius = `${radiusX}px ${radiusY}px / ${
-            radiusX * 2
-          }px ${radiusY * 2}px`;
-        });
-        let previousTouch;
-        main.addEventListener("touchmove", (e) => {
-          if (previousTouch) {
-            const movementX = e.touches[0].pageX - previousTouch.pageX;
-            const movementY = e.touches[0].pageY - previousTouch.pageY;
-            main.style.borderRadius = `${Math.abs(movementX)}px ${Math.abs(
-              movementY
-            )}px`;
+      // Reset font size to allow CSS clamp to take effect initially
+      h1.style.fontSize = '';
+
+      // Get the computed font size (based on vw/clamp)
+      let currentSize = parseFloat(window.getComputedStyle(h1).fontSize);
+
+      // If the content overflows the container, scale down pixel by pixel
+      while (h1.scrollWidth > container.clientWidth && currentSize > 12) {
+        currentSize -= 1;
+        h1.style.fontSize = currentSize + 'px';
+      }
+    }
+
+    window.addEventListener('resize', adjustTitleSize);
+    window.addEventListener('load', adjustTitleSize);
+    // Run once on init
+    setTimeout(adjustTitleSize, 100); // Slight delay to ensure fonts are loaded
+
+
+    // --- 2. SMOOTHER INTERACTIVE CONSTELLATION BACKGROUND ---
+    const canvas = document.getElementById('bg-canvas');
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    let particles = [];
+    let animationFrameId;
+
+    const mouse = { x: -1000, y: -1000, targetX: -1000, targetY: -1000 };
+
+    const dotSpacing = 45;
+    const baseDotSize = 1.5;
+    const pushRadius = 150;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function initCanvas() {
+      if (prefersReducedMotion) return;
+
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+      particles = [];
+
+      for (let x = 0; x < width; x += dotSpacing) {
+        for (let y = 0; y < height; y += dotSpacing) {
+          particles.push({
+            x: x, y: y, baseX: x, baseY: y, targetX: x, targetY: y,
+            size: baseDotSize,
+            color: 'rgba(255, 255, 255, 0.4)'
+          });
+        }
+      }
+    }
+
+    window.addEventListener('mousemove', (e) => {
+      mouse.targetX = e.clientX;
+      mouse.targetY = e.clientY;
+    });
+
+    window.addEventListener('touchmove', (e) => {
+      mouse.targetX = e.touches[0].clientX;
+      mouse.targetY = e.touches[0].clientY;
+    }, { passive: true });
+
+    window.addEventListener('mouseleave', () => { mouse.targetX = -1000; mouse.targetY = -1000; });
+    window.addEventListener('touchend', () => { mouse.targetX = -1000; mouse.targetY = -1000; });
+
+    function animateBackground() {
+      if (prefersReducedMotion) return;
+      ctx.clearRect(0, 0, width, height);
+
+      mouse.x += (mouse.targetX - mouse.x) * 0.1;
+      mouse.y += (mouse.targetY - mouse.y) * 0.1;
+
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const p1 = particles[i];
+          const p2 = particles[j];
+          const dx = p1.x - p2.x;
+          const dy = p1.y - p2.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+
+          if (dist < 90) {
+            const mouseDist1 = Math.sqrt((p1.x - mouse.x) ** 2 + (p1.y - mouse.y) ** 2);
+            const mouseDist2 = Math.sqrt((p2.x - mouse.x) ** 2 + (p2.y - mouse.y) ** 2);
+
+            if (mouseDist1 < 300 || mouseDist2 < 300) {
+              ctx.beginPath();
+              ctx.moveTo(p1.x, p1.y);
+              ctx.lineTo(p2.x, p2.y);
+              const opacity = (1 - dist / 90) * 0.4;
+              ctx.strokeStyle = `rgba(59, 130, 246, ${opacity})`;
+              ctx.lineWidth = 1;
+              ctx.stroke();
+            }
           }
-          previousTouch = e.touches[0];
-        });
-        main.addEventListener("touchend", (e) => {
-          previousTouch = null;
-        });
+        }
+      }
 
-        let i = 0;
-        const size = 350;
-        const duration = 4990;
-        const canvas = document.getElementById("texgen");
-        const orginalRgbColor = { r: 0, g: 3, b: 0.5 };
-        const secondRgbColor = { r: 5, g: 10, b: 10 };
-        canvas.width = size;
-        canvas.height = size;
+      particles.forEach(p => {
+        const dx = mouse.x - p.baseX;
+        const dy = mouse.y - p.baseY;
+        const distance = Math.sqrt(dx * dx + dy * dy);
 
-        const context = canvas.getContext("2d");
+        if (distance < pushRadius && distance > 0) {
+          const forceDirectionX = dx / distance;
+          const forceDirectionY = dy / distance;
+          const force = (pushRadius - distance) / pushRadius;
 
-        function render() {
-          const texture = new TG.Texture(size, size)
-            .add(new TG.SinX().frequency(0.066 + 0.05 * Math.sin(i / duration)))
-            .add(
-              new TG.SinY()
-                .offset(100)
-                .frequency(0.066 + 0.05 * Math.sin(i / duration))
-            )
-            .mul(
-              new TG.SinX()
-                .offset(400)
-                .frequency(0.044 + 0.09 * Math.sin(i / duration))
-                .tint(orginalRgbColor.r, orginalRgbColor.g, orginalRgbColor.b)
-            )
-            .add(
-              new TG.SinY()
-                .offset(400)
-                .frequency(0.45 + 1.11 * Math.sin(i / duration))
-            )
-            .mul(
-              new TG.SinY()
-                .offset(200)
-                .frequency(0.044 + 0.09 * Math.sin(i / duration))
-                .tint(secondRgbColor.r, secondRgbColor.g, secondRgbColor.b)
-            )
-            .add(new TG.SinX().frequency(0.061 + 0.05 * Math.sin(i / duration)))
-            .sub(new TG.Number().tint(5, 10, 5))
-            .toImageData(context);
+          const pushX = forceDirectionX * force * 30;
+          const pushY = forceDirectionY * force * 30;
 
-          context.putImageData(texture, 0, 0);
-          i++;
+          p.targetX = p.baseX + pushX;
+          p.targetY = p.baseY + pushY;
+
+          p.color = `rgba(59, 130, 246, ${0.4 + force * 0.6})`;
+          p.size = baseDotSize + (3 * force);
+        } else {
+          p.targetX = p.baseX;
+          p.targetY = p.baseY;
+          p.color = 'rgba(255, 255, 255, 0.4)';
+          p.size = baseDotSize;
         }
 
-        function animate() {
-          requestAnimationFrame(animate);
-          render();
+        p.x += (p.targetX - p.x) * 0.1;
+        p.y += (p.targetY - p.y) * 0.1;
+
+        if (p.size > 0) {
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+          ctx.fillStyle = p.color;
+          ctx.fill();
         }
-        animate();
       });
-    </script>
-  </body>
+
+      animationFrameId = requestAnimationFrame(animateBackground);
+    }
+
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        cancelAnimationFrame(animationFrameId);
+        initCanvas();
+        animateBackground();
+      }, 200);
+    });
+
+    if (!prefersReducedMotion) {
+      initCanvas();
+      animateBackground();
+    }
+
+    // --- 3. EASTER EGG (Terminal Override) ---
+    const overlay = document.getElementById('terminal-overlay');
+    const termBody = document.getElementById('term-body');
+
+    let isHacked = false;
+    let keyBuffer = "";
+
+    document.addEventListener('keydown', (e) => {
+      if (e.metaKey || e.ctrlKey || e.altKey) return;
+      keyBuffer += e.key;
+      if (keyBuffer.length > 4) keyBuffer = keyBuffer.slice(1);
+
+      if (keyBuffer.toLowerCase() === "sudo") activateEgg();
+    });
+
+    function activateEgg() {
+      if (isHacked) return;
+      isHacked = true;
+
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+
+      const lines = [
+        "System override initiated...",
+        "Bypassing security protocols...",
+        "Accessing user data...",
+        "\n> Name: MohammadHasan Pourghannad",
+        "> Role: Senior Front-End Developer",
+        "> Skills: HTML, CSS, JS, Node.js, Architecture",
+        "\n> You found the easter egg.",
+        "> You clearly pay attention to detail.",
+        "> Let's build something amazing together.",
+        "\n> Contact: hasan@pourghannad.ir",
+        "\n> System shutting down in 3... 2... 1..."
+      ];
+
+      let currentLine = 0;
+      let currentChar = 0;
+      let textHTML = "";
+
+      function type() {
+        if (currentLine < lines.length) {
+          if (currentChar < lines[currentLine].length) {
+            textHTML += lines[currentLine].charAt(currentChar);
+            termBody.innerHTML = textHTML + '<span class="blinking-cursor" aria-hidden="true"></span>';
+            currentChar++;
+            // Scroll to bottom as it types
+            termBody.scrollTop = termBody.scrollHeight;
+            setTimeout(type, Math.random() * 40 + 10);
+          } else {
+            textHTML += "<br>";
+            currentLine++;
+            currentChar = 0;
+            setTimeout(type, 400);
+          }
+        } else {
+          setTimeout(() => {
+            overlay.classList.remove('active');
+            overlay.setAttribute('aria-hidden', 'true');
+
+            setTimeout(() => {
+              isHacked = false;
+              termBody.innerHTML = "";
+              textHTML = "";
+            }, 500);
+          }, 4000);
+        }
+      }
+
+      setTimeout(type, 500);
+    }
+  </script>
+</body>
+
 </html>
