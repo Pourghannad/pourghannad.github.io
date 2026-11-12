@@ -6,6 +6,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="color-scheme" content="dark" />
 
   <!-- SEO Meta Tags -->
   <title>MohammadHasan Pourghannad | Senior Front-End Developer</title>
@@ -24,6 +25,11 @@
   <meta property="og:description"
     content="Architecting performant, accessible, and delightful web experiences. Always trying to improve." />
   <meta property="og:site_name" content="MohammadHasan Pourghannad" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="https://www.pourghannad.ir/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="MohammadHasan Pourghannad — Senior Front-End Developer" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -32,6 +38,8 @@
   <meta name="twitter:description"
     content="Architecting performant, accessible, and delightful web experiences. Always trying to improve." />
   <meta name="twitter:creator" content="@pourghannad" />
+  <meta name="twitter:image" content="https://www.pourghannad.ir/og-image.png" />
+  <meta name="twitter:image:alt" content="MohammadHasan Pourghannad — Senior Front-End Developer" />
 
   <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png" />
   <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png" />
@@ -47,9 +55,9 @@
   <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   <link rel="manifest" href="manifest.json" />
-  <meta name="msapplication-TileColor" content="#000000" />
+  <meta name="msapplication-TileColor" content="#0B0F19" />
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-  <meta name="theme-color" content="#000000" />
+  <meta name="theme-color" content="#0B0F19" />
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
@@ -67,12 +75,16 @@
   }
   </script>
 
-  <!-- Typography -->
+  <!-- Typography
+       display=block => no fallback flash. Text is invisible very briefly, then
+       appears in the target font only (no FOUT). Weights trimmed to what's used:
+       Syne 400 & 800, JetBrains Mono 400 & 700. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Syne:wght@400;600;700;800&display=swap"
-    rel="stylesheet">
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syne:wght@400;800&display=block">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syne:wght@400;800&display=block">
 
   <style>
     :root {
@@ -81,8 +93,8 @@
       --text-muted: #94A3B8;
       --accent: #3B82F6;
       --border: rgba(248, 250, 252, 0.15);
-      --font-display: 'Syne', sans-serif;
-      --font-mono: 'JetBrains Mono', monospace;
+      --font-display: 'Syne', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
     }
 
     * {
@@ -108,7 +120,6 @@
       justify-content: center;
       align-items: center;
       position: relative;
-      /* Added more padding to the body */
       padding: 30px 24px;
     }
 
@@ -148,7 +159,6 @@
       pointer-events: none;
     }
 
-    /* Layout Container - Made narrower and added internal padding */
     .container {
       width: 100%;
       max-width: 750px;
@@ -164,8 +174,7 @@
     }
 
     h1 {
-      /* Adjusted base font size */
-      font-size: clamp(2rem, 8vw, 5.5rem);
+      font-size: clamp(1.6rem, 6vw, 4rem);
       font-weight: 800;
       line-height: 1.05;
       letter-spacing: -0.04em;
@@ -179,7 +188,10 @@
       -webkit-text-stroke: 2px var(--text-main);
     }
 
-    /* Force POURGHANNAD to stay on one line */
+    h1 .small-size {
+      font-size: 54%;
+    }
+
     .nowrap-name {
       display: block;
       white-space: nowrap;
@@ -210,7 +222,6 @@
       width: 100%;
     }
 
-    /* Social Links */
     .socials {
       display: flex;
       gap: 15px;
@@ -254,7 +265,6 @@
       fill: currentColor;
     }
 
-    /* Creative Shutter Button */
     .btn-creative {
       position: relative;
       display: inline-flex;
@@ -327,7 +337,6 @@
       transform: translateY(0);
     }
 
-    /* Easter Egg Terminal */
     .terminal-overlay {
       position: fixed;
       inset: 0;
@@ -403,6 +412,7 @@
       word-break: break-word;
       max-height: 70vh;
       overflow-y: auto;
+      outline: none;
     }
 
     .blinking-cursor {
@@ -421,7 +431,6 @@
       }
     }
 
-    /* Accessibility: Prefers Reduced Motion */
     @media (prefers-reduced-motion: reduce) {
 
       *,
@@ -437,8 +446,6 @@
         display: none;
       }
     }
-
-    /* --- RESPONSIVE DESIGN TWEAKS --- */
 
     @media (max-width: 768px) {
       .container {
@@ -474,7 +481,6 @@
       }
     }
 
-    /* Ultra-Small Screens (Down to 320px) */
     @media (max-width: 360px) {
       body {
         padding: 15px 12px;
@@ -528,7 +534,6 @@
       }
     }
 
-    /* Landscape Mode on Mobile */
     @media (max-height: 500px) and (orientation: landscape) {
       .container {
         padding: 10px 0;
@@ -569,7 +574,7 @@
 
     <header>
       <h1 id="main-title">
-        MOHAMMAD<br>
+        <span class="small-size">MOHAMMAD</span><br>
         <span class="outline">HASAN</span><br>
         <span class="nowrap-name">POURGHANNAD</span>
       </h1>
@@ -633,56 +638,60 @@
   </div>
 
   <script>
-    // --- 1. BULLETPROOF TEXT SCALING (ENSURES POURGHANNAD NEVER WRAPS) ---
+    // --- 1. TITLE SCALING (runs again once fonts are ready) ---
     function adjustTitleSize() {
       const h1 = document.getElementById('main-title');
-      const container = document.querySelector('.container');
-
-      // Reset font size to allow CSS clamp to take effect initially
+      if (!h1) return;
       h1.style.fontSize = '';
-
-      // Get the computed font size (based on vw/clamp)
-      let currentSize = parseFloat(window.getComputedStyle(h1).fontSize);
-
-      // If the content overflows the container, scale down pixel by pixel
-      while (h1.scrollWidth > container.clientWidth && currentSize > 12) {
-        currentSize -= 1;
-        h1.style.fontSize = currentSize + 'px';
+      const avail = h1.clientWidth;
+      if (!avail) return;
+      let size = parseFloat(getComputedStyle(h1).fontSize);
+      if (h1.scrollWidth > avail) {
+        size = Math.floor(size * (avail / h1.scrollWidth) * 0.98);
+        h1.style.fontSize = size + 'px';
+        if (h1.scrollWidth > avail) {
+          size = Math.floor(size * (avail / h1.scrollWidth) * 0.98);
+          h1.style.fontSize = size + 'px';
+        }
       }
     }
 
-    window.addEventListener('resize', adjustTitleSize);
+    window.addEventListener('resize', adjustTitleSize, { passive: true });
     window.addEventListener('load', adjustTitleSize);
-    // Run once on init
-    setTimeout(adjustTitleSize, 100); // Slight delay to ensure fonts are loaded
+    document.addEventListener('DOMContentLoaded', adjustTitleSize);
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(adjustTitleSize);
+    }
 
-
-    // --- 2. SMOOTHER INTERACTIVE CONSTELLATION BACKGROUND ---
+    // --- 2. INTERACTIVE CONSTELLATION BACKGROUND (optimised) ---
     const canvas = document.getElementById('bg-canvas');
     const ctx = canvas.getContext('2d');
-    let width, height;
+    let width = 0, height = 0, dpr = 1;
     let particles = [];
     let animationFrameId;
 
     const mouse = { x: -1000, y: -1000, targetX: -1000, targetY: -1000 };
-
     const dotSpacing = 45;
     const baseDotSize = 1.5;
     const pushRadius = 150;
-
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     function initCanvas() {
       if (prefersReducedMotion) return;
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = Math.floor(width * dpr);
+      canvas.height = Math.floor(height * dpr);
+      canvas.style.width = width + 'px';
+      canvas.style.height = height + 'px';
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
       particles = [];
-
       for (let x = 0; x < width; x += dotSpacing) {
         for (let y = 0; y < height; y += dotSpacing) {
           particles.push({
-            x: x, y: y, baseX: x, baseY: y, targetX: x, targetY: y,
+            x, y, baseX: x, baseY: y, targetX: x, targetY: y,
             size: baseDotSize,
             color: 'rgba(255, 255, 255, 0.4)'
           });
@@ -693,9 +702,10 @@
     window.addEventListener('mousemove', (e) => {
       mouse.targetX = e.clientX;
       mouse.targetY = e.clientY;
-    });
+    }, { passive: true });
 
     window.addEventListener('touchmove', (e) => {
+      if (!e.touches[0]) return;
       mouse.targetX = e.touches[0].clientX;
       mouse.targetY = e.touches[0].clientY;
     }, { passive: true });
@@ -709,50 +719,48 @@
 
       mouse.x += (mouse.targetX - mouse.x) * 0.1;
       mouse.y += (mouse.targetY - mouse.y) * 0.1;
+      const active = mouse.x > -500 && mouse.y > -500;
 
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const p1 = particles[i];
-          const p2 = particles[j];
-          const dx = p1.x - p2.x;
-          const dy = p1.y - p2.y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-
-          if (dist < 90) {
-            const mouseDist1 = Math.sqrt((p1.x - mouse.x) ** 2 + (p1.y - mouse.y) ** 2);
-            const mouseDist2 = Math.sqrt((p2.x - mouse.x) ** 2 + (p2.y - mouse.y) ** 2);
-
-            if (mouseDist1 < 300 || mouseDist2 < 300) {
+      // Draw connections ONLY near the cursor -> O(m^2), m small
+      if (active) {
+        const near = [];
+        for (let i = 0; i < particles.length; i++) {
+          const p = particles[i];
+          const dx = p.x - mouse.x, dy = p.y - mouse.y;
+          if (dx * dx + dy * dy < 90000) near.push(p); // 300^2
+        }
+        ctx.lineWidth = 1;
+        for (let i = 0; i < near.length; i++) {
+          const p1 = near[i];
+          for (let j = i + 1; j < near.length; j++) {
+            const p2 = near[j];
+            const dx = p1.x - p2.x, dy = p1.y - p2.y;
+            const d2 = dx * dx + dy * dy;
+            if (d2 < 8100) { // 90^2
+              const dist = Math.sqrt(d2);
               ctx.beginPath();
               ctx.moveTo(p1.x, p1.y);
               ctx.lineTo(p2.x, p2.y);
-              const opacity = (1 - dist / 90) * 0.4;
-              ctx.strokeStyle = `rgba(59, 130, 246, ${opacity})`;
-              ctx.lineWidth = 1;
+              ctx.strokeStyle = 'rgba(59, 130, 246, ' + ((1 - dist / 90) * 0.4).toFixed(3) + ')';
               ctx.stroke();
             }
           }
         }
       }
 
-      particles.forEach(p => {
-        const dx = mouse.x - p.baseX;
-        const dy = mouse.y - p.baseY;
-        const distance = Math.sqrt(dx * dx + dy * dy);
+      // Update + draw particles
+      for (let i = 0; i < particles.length; i++) {
+        const p = particles[i];
+        const dx = mouse.x - p.baseX, dy = mouse.y - p.baseY;
+        const d2 = dx * dx + dy * dy;
+        const distance = Math.sqrt(d2);
 
-        if (distance < pushRadius && distance > 0) {
-          const forceDirectionX = dx / distance;
-          const forceDirectionY = dy / distance;
+        if (active && distance < pushRadius && distance > 0) {
           const force = (pushRadius - distance) / pushRadius;
-
-          const pushX = forceDirectionX * force * 30;
-          const pushY = forceDirectionY * force * 30;
-
-          p.targetX = p.baseX + pushX;
-          p.targetY = p.baseY + pushY;
-
-          p.color = `rgba(59, 130, 246, ${0.4 + force * 0.6})`;
-          p.size = baseDotSize + (3 * force);
+          p.targetX = p.baseX + (dx / distance) * force * 30;
+          p.targetY = p.baseY + (dy / distance) * force * 30;
+          p.color = 'rgba(59, 130, 246, ' + (0.4 + force * 0.6).toFixed(3) + ')';
+          p.size = baseDotSize + 3 * force;
         } else {
           p.targetX = p.baseX;
           p.targetY = p.baseY;
@@ -763,13 +771,11 @@
         p.x += (p.targetX - p.x) * 0.1;
         p.y += (p.targetY - p.y) * 0.1;
 
-        if (p.size > 0) {
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-          ctx.fillStyle = p.color;
-          ctx.fill();
-        }
-      });
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fillStyle = p.color;
+        ctx.fill();
+      }
 
       animationFrameId = requestAnimationFrame(animateBackground);
     }
@@ -780,7 +786,7 @@
       resizeTimeout = setTimeout(() => {
         cancelAnimationFrame(animationFrameId);
         initCanvas();
-        animateBackground();
+        if (!prefersReducedMotion) animateBackground();
       }, 200);
     });
 
@@ -789,27 +795,40 @@
       animateBackground();
     }
 
-    // --- 3. EASTER EGG (Terminal Override) ---
+    // --- 3. EASTER EGG (Terminal) ---
     const overlay = document.getElementById('terminal-overlay');
     const termBody = document.getElementById('term-body');
 
     let isHacked = false;
-    let keyBuffer = "";
+    let keyBuffer = '';
+    let typingToken = 0;
+    let lastFocused = null;
 
     document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && isHacked) {
+        closeEgg();
+        return;
+      }
       if (e.metaKey || e.ctrlKey || e.altKey) return;
-      keyBuffer += e.key;
-      if (keyBuffer.length > 4) keyBuffer = keyBuffer.slice(1);
+      if (e.target && e.target.closest && e.target.closest('input, textarea, [contenteditable]')) return;
 
-      if (keyBuffer.toLowerCase() === "sudo") activateEgg();
+      keyBuffer += e.key;
+      if (keyBuffer.length > 4) keyBuffer = keyBuffer.slice(-4);
+
+      if (keyBuffer.toLowerCase() === 'sudo') activateEgg();
     });
 
     function activateEgg() {
       if (isHacked) return;
       isHacked = true;
+      lastFocused = document.activeElement;
 
       overlay.classList.add('active');
       overlay.setAttribute('aria-hidden', 'false');
+      termBody.setAttribute('tabindex', '-1');
+      termBody.focus();
+
+      const token = ++typingToken;
 
       const lines = [
         "System override initiated...",
@@ -827,15 +846,15 @@
 
       let currentLine = 0;
       let currentChar = 0;
-      let textHTML = "";
+      let textHTML = '';
 
       function type() {
+        if (token !== typingToken) return;
         if (currentLine < lines.length) {
           if (currentChar < lines[currentLine].length) {
             textHTML += lines[currentLine].charAt(currentChar);
             termBody.innerHTML = textHTML + '<span class="blinking-cursor" aria-hidden="true"></span>';
             currentChar++;
-            // Scroll to bottom as it types
             termBody.scrollTop = termBody.scrollHeight;
             setTimeout(type, Math.random() * 40 + 10);
           } else {
@@ -845,20 +864,23 @@
             setTimeout(type, 400);
           }
         } else {
-          setTimeout(() => {
-            overlay.classList.remove('active');
-            overlay.setAttribute('aria-hidden', 'true');
-
-            setTimeout(() => {
-              isHacked = false;
-              termBody.innerHTML = "";
-              textHTML = "";
-            }, 500);
-          }, 4000);
+          setTimeout(() => { if (token === typingToken) closeEgg(); }, 4000);
         }
       }
 
       setTimeout(type, 500);
+    }
+
+    function closeEgg() {
+      typingToken++;
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      setTimeout(() => {
+        isHacked = false;
+        termBody.innerHTML = '';
+        termBody.removeAttribute('tabindex');
+      }, 500);
+      if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
     }
   </script>
 </body>
